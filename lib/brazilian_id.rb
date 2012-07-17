@@ -1,0 +1,11 @@
+['version.rb', 'mod11.rb', 'brazilian_id.rb'].each do |filename|
+  require File.join(File.dirname(__FILE__), 'brazilian_id', filename)
+end
+
+['cpf.rb', 'cnpj.rb', 'titulo_eleitor.rb'].each do |filename|
+  require File.join(File.dirname(__FILE__), 'brazilian_id', 'ids', filename)
+end
+
+
+
+
