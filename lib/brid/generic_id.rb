@@ -25,6 +25,8 @@ class GenericID
   def valid?
     @valid ||= begin
       valid_number == @number and not invalid_sequential?
+    rescue TypeError
+      false
     end
   end
 
