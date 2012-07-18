@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    brid (0.1.2)
+    brid (0.1.3)
     json_pure (1.7.3)
     rack (1.4.1)
     rack-protection (1.2.0)
