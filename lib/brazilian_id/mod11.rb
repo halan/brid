@@ -25,15 +25,19 @@ class Mod11
 
   alias :>> :*
 
-  def to_s
-    @number.to_s
-  end
-
   def + digit
     Mod11.new(@number += digit.to_s.scan(/\d/).join, :base => @base, :mode => @mod)
   end
 
   alias :<< :+
+
+  def to_s
+    @number.to_s
+  end
+
+  def == other
+    self.to_s == other.to_s
+  end
 
   private
   def bases

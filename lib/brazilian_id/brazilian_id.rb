@@ -22,7 +22,7 @@ class BrazilianID
 
   def valid?
     @valid ||= begin
-      @number == valid_number and not invalid_sequential?
+      valid_number == @number and not invalid_sequential?
     end
   end
 
@@ -42,7 +42,7 @@ class BrazilianID
   end
 
   def valid_number
-    (mod11(sequential) * check_digits_length).to_s
+    mod11(sequential) * check_digits_length
   end
 
   def clear_number number
