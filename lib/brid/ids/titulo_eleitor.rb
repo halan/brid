@@ -18,6 +18,10 @@ module Brid
       end
     end
 
+    def to_s
+      @number.scan[/\d{4}/].join ' '
+    end
+
     def origin
       @origin ||= begin
         [ nil, :sp, :mg, :rj, :rs, :ba, :pr, :ce,
