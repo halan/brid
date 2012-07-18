@@ -13,7 +13,7 @@ get '/:id' do
     JSONP(
       :document   => id.to_s,
       :validation => id.valid?,
-      :origin     => id.origin
+      :origin     => (id.origin if id.methods.include? :origin)
     ) 
   else
     JSONP(
