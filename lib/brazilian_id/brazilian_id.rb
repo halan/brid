@@ -3,7 +3,9 @@ class BrazilianID
   def check_digits_length; 2; end;
 
   def initialize number
-    @number = clear_number(number)[0..number_length]
+    @number = clear_number(number)
+
+    raise ArgumentError.new "invalid number" if @number.length != number_length
   end
 
   def check_digits
