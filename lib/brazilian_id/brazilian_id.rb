@@ -9,19 +9,27 @@ class BrazilianID
   end
 
   def check_digits
-    @number[/..$/]
+    @check_digits ||= begin
+      @number[/..$/]
+    end
   end
 
   def sequential
-    @number[/^(.*)..$/, 1]
+    @sequential ||= begin
+      @number[/^(.*)..$/, 1]
+    end
   end
 
   def valid?
-    @number == valid_number and not invalid_sequential?
+    @valid ||= begin
+      @number == valid_number and not invalid_sequential?
+    end
   end
 
   def invalid_sequential?
-    sequential.chars.to_a.uniq.count.eql? 1
+    @invalid_sequential ||=begin
+      sequential.chars.to_a.uniq.count.eql? 1
+    end
   end
 
   def to_s

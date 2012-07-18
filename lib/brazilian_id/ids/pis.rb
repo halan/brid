@@ -2,11 +2,15 @@ class PIS < BrazilianID
   def number_length; 11; end
 
   def check_digits
-    @number[/.$/]
+    @check_digits ||= begin
+      @number[/.$/]
+    end
   end
 
   def sequential
-    @number[/^(.*).$/, 1]
+    @sequential ||= begin
+      @number[/^(.*).$/, 1]
+    end
   end
 
   def to_s

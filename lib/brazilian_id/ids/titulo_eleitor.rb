@@ -6,19 +6,25 @@ class TituloEleitor < BrazilianID
   end
 
   def sequential 
-    @number[/^(.*)....$/, 1]
+    @sequential ||= begin
+      @number[/^(.*)....$/, 1]
+    end
   end
 
   def uf_digit
-    @number[/(..)..$/, 1]
+    @uf_digit ||= begin
+      @number[/(..)..$/, 1]
+    end
   end
 
   def origin
-    [ nil, :sp, :mg, :rj, :rs, :ba, :pr, :ce,
-      :pe, :sc, :go, :ma, :pb, :pa, :es,
-      :pi, :rn, :al, :mt, :ms, :df, :se,
-      :am, :ro, :ac, :ap, :rr, :to, :exterior
-    ][uf_digit.to_i]
+    @origin ||= begin
+      [ nil, :sp, :mg, :rj, :rs, :ba, :pr, :ce,
+        :pe, :sc, :go, :ma, :pb, :pa, :es,
+        :pi, :rn, :al, :mt, :ms, :df, :se,
+        :am, :ro, :ac, :ap, :rr, :to, :exterior
+      ][uf_digit.to_i]
+    end
   end
 
   private

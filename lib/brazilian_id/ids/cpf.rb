@@ -10,18 +10,20 @@ class CPF < BrazilianID
   end
 
   def origin
-    [
-      [:rs],
-      [:df, :go, :ms, :mt, :to],
-      [:ac, :am, :ap, :pa, :ro, :rr],
-      [:ce, :ma, :pi],
-      [:al, :pb, :pe, :rn],
-      [:ba, :se],
-      [:mg],
-      [:es, :rj],
-      [:sp],
-      [:pr, :sc]
-    ][sequential[-1,1].to_i]
+    @origin ||= begin
+      [
+        [:rs],
+        [:df, :go, :ms, :mt, :to],
+        [:ac, :am, :ap, :pa, :ro, :rr],
+        [:ce, :ma, :pi],
+        [:al, :pb, :pe, :rn],
+        [:ba, :se],
+        [:mg],
+        [:es, :rj],
+        [:sp],
+        [:pr, :sc]
+      ][sequential[-1,1].to_i]
+    end
   end
 
   def from? uf
