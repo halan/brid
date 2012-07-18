@@ -1,10 +1,13 @@
 module Brid
   class TituloEleitor < GenericID
-    def number_length; 10; end;
+    def number_length; 12; end;
 
     def initialize number
-      @number = clear_number(number)
+      @number = clear_number(number).rjust number_length, '0'
+
+      raise ArgumentError.new "invalid number" if @number.length != number_length
     end
+
 
     def sequential 
       @sequential ||= begin
