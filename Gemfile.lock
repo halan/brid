@@ -1,7 +1,12 @@
+GIT
+  remote: git://github.com/halan/brid.git
+  revision: f00f180c9cccf7761d1e9c745221d46359e69be7
+  specs:
+    brid (0.1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    brid (0.1.3)
     json_pure (1.7.3)
     rack (1.4.1)
     rack-protection (1.2.0)
@@ -19,6 +24,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  brid
+  brid!
   sinatra
   sinatra-jsonp
