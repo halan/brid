@@ -1,4 +1,4 @@
-module BrID
+module Brid
   class CNPJ < GenericID
     def number_length; 14; end
     def check_digits_length; 2; end;
@@ -19,4 +19,4 @@ module BrID
   end
 end
 
-CNPJ = BrID::CNPJ if not defined? CNPJ and not defined? Cnpj
+CNPJ = Brid::CNPJ if not defined? CNPJ and not defined? Cnpj

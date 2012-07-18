@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'lib', 'brazilian_id.rb')
+require File.join(File.dirname(__FILE__), '..', 'lib', 'brid.rb')
 
 describe Mod11 do
   it { Mod11.new('009147274').check_digit.should ==  1 }

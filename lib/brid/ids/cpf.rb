@@ -1,4 +1,4 @@
-module BrID
+module Brid
   class CPF < GenericID
     def number_length; 11; end
     def check_digits_length; 2; end;
@@ -34,4 +34,4 @@ module BrID
   end
 end
 
-CPF = BrID::CPF if not defined? CPF and not defined? Cpf
+CPF = Brid::CPF if not defined? CPF and not defined? Cpf

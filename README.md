@@ -1,11 +1,11 @@
-# BrazilianId
+# Brid
 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'brazilian_id'
+    gem 'brid'
 
 And then execute:
 
@@ -13,7 +13,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install brazilian_id
+    $ gem install brid
 
 ## Usage
 

@@ -1,4 +1,4 @@
-module BrID
+module Brid
   class PIS < GenericID
     def number_length; 11; end
 
@@ -30,4 +30,4 @@ module BrID
   end
 end
 
-PIS = BrID::PIS if not defined? PIS and not defined? Pis
+PIS = Brid::PIS if not defined? PIS and not defined? Pis

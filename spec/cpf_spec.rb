@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'lib', 'brazilian_id.rb')
+require File.join(File.dirname(__FILE__), '..', 'lib', 'brid.rb')
 
 describe CPF do
   it { CPF.new('009.147.274-19').should be_valid }

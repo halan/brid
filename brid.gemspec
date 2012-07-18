@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/brazilian_id/version', __FILE__)
+require File.expand_path('../lib/brid/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Halan Pinheiro"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "brazilian_id"
+  gem.name          = "brid"
   gem.require_paths = ["lib"]
-  gem.version       = BrazilianId::VERSION
+  gem.version       = Brid::VERSION
 end

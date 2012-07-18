@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'lib', 'brazilian_id.rb')
+require File.join(File.dirname(__FILE__), '..', 'lib', 'brid.rb')
 
 describe PIS do
   it { PIS.new('170.33259.50-4').should be_valid }

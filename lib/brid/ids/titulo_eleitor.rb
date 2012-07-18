@@ -1,4 +1,4 @@
-module BrID
+module Brid
   class TituloEleitor < GenericID
     def number_length; 10; end;
 
@@ -38,4 +38,4 @@ module BrID
   end
 end
 
-TituloEleitoral = TituloEleitor = BrID::TituloEleitor unless defined? TituloEleitor and not defined? TituloEleitoral 
+TituloEleitoral = TituloEleitor = Brid::TituloEleitor unless defined? TituloEleitor and not defined? TituloEleitoral 
