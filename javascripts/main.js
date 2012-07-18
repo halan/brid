@@ -5,6 +5,9 @@ $(function()
   $('#try-brid').change(function()
   {
     $self = $(this);
+
+    $self.removeClass('valid').removeClass('invalid');
+
     $.getJSON('http://brid-api.herokuapp.com/'+$self.val()+'?callback=?', function(r){
       if(r.validation) $self.addClass('valid');
       else $self.addClass('invalid');
@@ -14,6 +17,7 @@ $(function()
   }).focus(function()
   {
     $self = $(this);
-    $self.removeClass('valid').removeClass('invalid');
-  })
+    $self.removeClass('invalid');
+  });
+
 });
