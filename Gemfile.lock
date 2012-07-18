@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/halan/brid.git
-  revision: f00f180c9cccf7761d1e9c745221d46359e69be7
+  revision: 7720f4ff439d8c74b4ec3741844f2a5ce22c64b4
   specs:
     brid (0.1.3)
 
