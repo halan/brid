@@ -1,5 +1,5 @@
 module BrID
-  class PIS < BrazilianID
+  class PIS < GenericID
     def number_length; 11; end
 
     def check_digits

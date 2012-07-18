@@ -1,6 +1,7 @@
 module BrID
-  class CNPJ < BrazilianID
+  class CNPJ < GenericID
     def number_length; 14; end
+    def check_digits_length; 2; end;
 
     def to_s
       er = /^(.{2})(.{3})(.{3})(.{4})(.{2})/

@@ -1,6 +1,7 @@
 module BrID
-  class CPF < BrazilianID
+  class CPF < GenericID
     def number_length; 11; end
+    def check_digits_length; 2; end;
 
     def to_s
       "#{sequential.scan(/\d{3}/).join('.')}-#{check_digits}"

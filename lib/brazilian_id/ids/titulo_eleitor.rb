@@ -1,5 +1,5 @@
 module BrID
-  class TituloEleitor < BrazilianID
+  class TituloEleitor < GenericID
     def number_length; 10; end;
 
     def initialize number

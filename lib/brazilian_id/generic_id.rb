@@ -1,22 +1,24 @@
-class BrazilianID
+class GenericID
   def number_length; 0; end;
-  def check_digits_length; 2; end;
+  def check_digits_length; 1; end;
 
   def initialize number
     @number = clear_number(number)
 
-    raise ArgumentError.new "invalid number" if @number.length != number_length
+    if number_length > 0 
+      raise ArgumentError.new "invalid number" if @number.length != number_length
+    end
   end
 
   def check_digits
     @check_digits ||= begin
-      @number[/..$/]
+      @number[-check_digits_length, check_digits_length]
     end
   end
 
   def sequential
     @sequential ||= begin
-      @number[/^(.*)..$/, 1]
+      @number[0, @number.length - check_digits_length]
     end
   end
 
@@ -33,7 +35,7 @@ class BrazilianID
   end
 
   def to_s
-    "#{sequential.scan(/\d{3}/).join('.')}-#{check_digits}"
+    "#{sequential}-#{check_digits}"
   end
 
   protected

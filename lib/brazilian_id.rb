@@ -1,4 +1,4 @@
-['version.rb', 'mod11.rb', 'brazilian_id.rb'].each do |filename|
+['version.rb', 'mod11.rb', 'generic_id.rb'].each do |filename|
   require File.join(File.dirname(__FILE__), 'brazilian_id', filename)
 end
 
