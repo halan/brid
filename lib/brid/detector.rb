@@ -13,7 +13,7 @@ module Brid
       class_constant  = @@detect_between[class_symbol]
       begin
         _number         = class_constant.new number
-        break _number  if _number.valid?
+        break _number  if _number and _number.valid?
       rescue ArgumentError
       end
     end
