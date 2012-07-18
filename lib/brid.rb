@@ -7,5 +7,5 @@ end
 end
 
 
-
+require File.join(File.dirname(__FILE__), 'brid', 'detector.rb')
 
