@@ -1,5 +1,5 @@
 class CPF < BrazilianID
-  def number_length; 11; end;
+  def number_length; 11; end
 
   def to_s
     "#{sequential.scan(/\d{3}/).join('.')}-#{check_digits}"

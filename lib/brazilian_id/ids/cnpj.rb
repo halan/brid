@@ -1,5 +1,5 @@
 class CNPJ < BrazilianID
-  def number_length; 14;  end;
+  def number_length; 14; end
 
   def to_s
     er = /^(.{2})(.{3})(.{3})(.{4})(.{2})/
