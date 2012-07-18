@@ -590,8 +590,15 @@ dd p:first-child {
 #try-brid:hover
 {
   text-shadow: 2px 2px 1px #BDB6AD;
- 
 }
 
 .valid { color: green; text-align: center; }
 .invalid { color: red; }
+
+#brid-region
+{
+  position: relative;
+  top: -35px;
+  text-align: center;
+  opacity: .5;
+}
