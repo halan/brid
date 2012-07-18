@@ -7,13 +7,21 @@ get '/favicon.ico' do
 end
 
 get '/:id' do
-  id = Brid.detect(params[:id])
+  id = Brid.detect(params['id'])
   
-  JSONP(
-    :document   => id.to_s,
-    :validation => id.valid?,
-    :origin     => id.origin
-  ) 
+  if id
+    JSONP(
+      :document   => id.to_s,
+      :validation => id.valid?,
+      :origin     => id.origin
+    ) 
+  else
+    JSONP(
+      :document     => params['id'],
+      :validattion  => false,
+      :origin       => []
+    )
+  end
 end
 
 
