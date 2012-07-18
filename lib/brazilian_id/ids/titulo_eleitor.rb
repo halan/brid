@@ -30,4 +30,4 @@ class TituloEleitor < BrazilianID
   end
 end
 
-
+TituloEleitoral = TituloEleitor
