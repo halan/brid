@@ -19,7 +19,7 @@ module Brid
     end
 
     def to_s
-      @number.scan[/\d{4}/].join ' '
+      @number.scan(/\d{4}/).join ' '
     end
 
     def origin
