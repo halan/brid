@@ -30,8 +30,8 @@ module BrID
 
     private
     def valid_number
-      first_check_digit   = mod11(sequential).to_s
-      second_check_digit  = mod11(uf_digit+first_check_digit).to_s
+      first_check_digit   = mod11(sequential).cdigi.to_s
+      second_check_digit  = mod11(uf_digit+first_check_digit).cdigi.to_s
 
       sequential + uf_digit + first_check_digit + second_check_digit
     end

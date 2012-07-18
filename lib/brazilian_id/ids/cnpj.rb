@@ -13,7 +13,7 @@ module BrID
 
     private
     def mod11 number
-      Mod11.new(number, :base => 2..9).check_digit
+      Mod11.new(number, :base => 2..9)
     end
   end
 end

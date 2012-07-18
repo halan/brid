@@ -15,6 +15,26 @@ class Mod11
     end
   end
 
+  alias :cdigi :check_digit
+
+  def * digits
+    digits.times.reduce(self) do |number, digit|
+      number += Mod11.new(number, :base => @base, :mode => @mod).cdigi
+    end
+  end
+
+  alias :>> :*
+
+  def to_s
+    @number.to_s
+  end
+
+  def + digit
+    Mod11.new(@number += digit.to_s.scan(/\d/).join, :base => @base, :mode => @mod)
+  end
+
+  alias :<< :+
+
   private
   def bases
     multipliers = ([*@base] * (@number.length/@base.count+1))[0..(@number.length-1)].reverse

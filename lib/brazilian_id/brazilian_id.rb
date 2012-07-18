@@ -38,13 +38,11 @@ class BrazilianID
 
   protected
   def mod11 number
-    Mod11.new(number).check_digit
+    Mod11.new(number)
   end
 
   def valid_number
-    (1..check_digits_length).reduce(sequential) do |number, digit|
-      number += mod11(number).to_s
-    end
+    (mod11(sequential) * check_digits_length).to_s
   end
 
   def clear_number number
