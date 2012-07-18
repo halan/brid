@@ -567,3 +567,31 @@ dd p:first-child {
   font-size: .85em;
   font-style: italic;
 }
+
+#try-brid
+{
+  line-height: 2em;
+  font-size: 3em;
+  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  box-shadow: inset 3px 3px 1px #BDB6AD;
+  background: #FFF6E9;
+  padding: 4px;
+  width: 100%;
+  border: none;
+  -webkit-transition: all .5s;
+     -moz-transition: all .5s;
+      -ms-transition: all .5s;
+       -o-transition: all .5s;
+          transition: all .5s;
+}
+
+#try-brid:hover
+{
+  text-shadow: 2px 2px 1px #BDB6AD;
+ 
+}
+
+.valid { color: green; text-align: center; }
+.invalid { color: red; }
