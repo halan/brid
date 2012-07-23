@@ -15,6 +15,15 @@ Or install it yourself as:
 
     $ gem install brid
 
+## Components
+
+* CPF object with validation (brazilian document)
+* CNPJ object with validation (brazilian document)
+* Título de Eleitor object with validation (brazilian document)
+* PIS object with validation (brazilian document)
+* Cred Card object with validation (generic)
+* Generic ID validation (can validate bank account and other things)
+
 ## Usage
 
 ### Validating a CPF
