@@ -41,6 +41,11 @@ GenericID.new('12345-5').valid? # true
 (Mod11.new('12345') * 1).to_s == '123455' # true
 ```
 
+### Next Steps
+
+* Develop a rails plugin built on top of ActiveRecord
+* Develop a smart generator for fixture on tests (I thought of doing built on top of ffaker, like my othre gem: [ffaker-cpfcnpj](https://github.com/halan/ffaker-cpfcnpj) )
+
 ## Contributing
 
 1. Fork it
