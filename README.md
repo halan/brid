@@ -17,7 +17,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Validating a CPF
+
+    CPF.new('135246876-01').valid?   # true
+    CPF.new('135.246.876-01').valid? # true
+    CPF.new('13524687601').valid?    # true
+    CPF.new(13524687601).valid?      # true
+    (Mod11.new('135246876') * 2).to_s == '13524687601' # true
+
+### Validating a CNPJ
+
+    CNPJ.new('18.781.203/0001-28').valid? # true
+    (Mod11.new('8.781.203/0001', :base => 2..9) * 2).to_s == '8781203000128' # true
+    
+### Validating a Bank Account
+
+    GenericID.new('12345-5').valid? # true
+    (Mod11.new('12345') * 1).to_s == '123455' # true
 
 ## Contributing
 
