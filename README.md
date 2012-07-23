@@ -41,6 +41,14 @@ GenericID.new('12345-5').valid? # true
 (Mod11.new('12345') * 1).to_s == '123455' # true
 ```
 
+### Validating a Cred Card
+
+``` ruby
+CredCard.new('30111198763335').valid? # true
+(Mod10.new('3011119876333') * 1).to_s == '30111198763335' # true
+```
+
+
 ### Next Steps
 
 * Develop a rails plugin built on top of ActiveRecord
