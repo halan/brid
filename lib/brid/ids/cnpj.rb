@@ -13,7 +13,7 @@ module Brid
     end
 
     private
-    def mod11 number
+    def mod number
       Mod11.new(number, :base => 2..9)
     end
   end

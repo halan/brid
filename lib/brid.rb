@@ -1,4 +1,4 @@
-['version.rb', 'mod11.rb', 'generic_id.rb'].each do |filename|
+['version.rb', 'mod.rb', 'mod10.rb', 'mod11.rb', 'generic_id.rb'].each do |filename|
   require File.join(File.dirname(__FILE__), 'brid', filename)
 end
 
