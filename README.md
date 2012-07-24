@@ -32,25 +32,30 @@ Or install it yourself as:
 ### Validating a CPF
 
 ``` ruby
-CPF.new('135246876-01').valid?   # true
-CPF.new('135.246.876-01').valid? # true
-CPF.new('13524687601').valid?    # true
-CPF.new(13524687601).valid?      # true
+CPF.new('135246876-01').valid?                     # true
+CPF.new('135.246.876-01').valid?                   # true
+CPF.new('13524687601').valid?                      # true
+CPF.new(13524687601).valid?                        # true
 (Mod11.new('135246876') * 2).to_s == '13524687601' # true
+'135246876'.mod11(2)              == '13524687601' # true
 ```
 
 ### Validating a CNPJ
 
 ``` ruby
-CNPJ.new('18.781.203/0001-28').valid? # true
+CNPJ.new('18.781.203/0001-28').valid?                                    # true
 (Mod11.new('8.781.203/0001', :base => 2..9) * 2).to_s == '8781203000128' # true
+'8.781.203/0001'.mod11(2, :base => 2..9)              == '8781203000128' # true
+
 ``` 
   
 ### Validating a Bank Account
 
 ``` ruby
-GenericID.new('12345-5').valid? # true
+GenericID.new('12345-5').valid?           # true
 (Mod11.new('12345') * 1).to_s == '123455' # true
+'12345'.mod11                 == '123455' # true
+
 ```
 
 ### Validating a Cred Card
@@ -58,6 +63,7 @@ GenericID.new('12345-5').valid? # true
 ``` ruby
 CredCard.new('411119876333502').valid? # true
 (Mod10.new('41111987633350') * 1).to_s == '411119876333502' # true
+'41111987633350'.mod10                 == '411119876333502' # true
 ```
 
 
