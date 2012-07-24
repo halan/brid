@@ -58,7 +58,7 @@ CredCard.new('30111198763335').valid? # true
 ```
 
 
-### Next Steps
+## Next Steps
 
 * Develop a rails plugin built on top of ActiveRecord
 * Develop a smart generator for fixture on tests (I thought of doing built on top of ffaker, like my othre gem: [ffaker-cpfcnpj](https://github.com/halan/ffaker-cpfcnpj) )
