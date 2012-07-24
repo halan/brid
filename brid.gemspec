@@ -14,4 +14,5 @@ Gem::Specification.new do |gem|
   gem.name          = "brid"
   gem.require_paths = ["lib"]
   gem.version       = Brid::VERSION
+  gem.date          = Time.new.strftime("%Y-%m-%d")
 end
