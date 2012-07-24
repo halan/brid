@@ -8,6 +8,8 @@ class GenericID
     if number_length > 0 
       raise ArgumentError.new "invalid number" if @number.length != number_length
     end
+
+    valid?
   end
 
   def check_digits
