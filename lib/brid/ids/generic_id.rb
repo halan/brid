@@ -41,12 +41,8 @@ class GenericID
   end
 
   protected
-  def mod number
-    Mod11.new(number)
-  end
-
   def valid_number
-    mod(sequential) * check_digits_length
+    sequential.mod11(check_digits_length)
   end
 
   def clear_number number

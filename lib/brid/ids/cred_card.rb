@@ -28,12 +28,8 @@ module Brid
     end
 
     private
-    def mod number
-      Mod10.new number
-    end
-
     def valid_number
-      sequential + mod(sequential).check_digit.to_s
+      sequential.mod10(1)
     end
   end
 end

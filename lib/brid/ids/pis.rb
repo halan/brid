@@ -20,12 +20,8 @@ module Brid
     end
 
     private
-    def mod number
-      Mod11.new(number, :base => 2..9)
-    end
-
     def valid_number
-      mod(sequential) * 1
+      sequential.mod11(check_digits_length, :base => 2..9)
     end
   end
 end
