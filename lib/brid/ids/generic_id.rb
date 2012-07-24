@@ -2,6 +2,7 @@ class GenericID
   def number_length; 0; end;
   def check_digits_length; 1; end;
 
+  attr_reader :number
   def initialize number
     @number = clear_number(number)
 
@@ -48,7 +49,7 @@ class GenericID
   end
 
   def clear_number number
-    number.to_s.scan(/\d/).join
+    number.to_s.gsub(/\D/, '')
   end
 end
 
