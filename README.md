@@ -25,6 +25,7 @@ Or install it yourself as:
 * PIS object with validation (brazilian document)
 * Cred Card object with validation (generic)
 * Generic ID validation (can validate bank account and other things)
+* Luhn algorithms modulus 10 and 11 http://en.wikipedia.org/wiki/Luhn_algorithm
 
 ## Usage
 
