@@ -55,8 +55,8 @@ GenericID.new('12345-5').valid? # true
 ### Validating a Cred Card
 
 ``` ruby
-CredCard.new('30111198763335').valid? # true
-(Mod10.new('3011119876333') * 1).to_s == '30111198763335' # true
+CredCard.new('411119876333502').valid? # true
+(Mod10.new('41111987633350') * 1).to_s == '411119876333502' # true
 ```
 
 
