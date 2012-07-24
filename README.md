@@ -17,6 +17,12 @@ Or install it yourself as:
 
     $ gem install brid
 
+Or if you want use Rails3 validations on ActiveModel, add this to your application's Gemfile:
+
+```
+gem 'brid-rails'
+```
+
 ## Components
 
 * CPF object with validation (brazilian document)
@@ -69,7 +75,6 @@ CredCard.new('411119876333502').valid? # true
 
 ## Next Steps
 
-* Develop a rails plugin built on top of ActiveRecord
 * Develop a smart generator for fixture on tests (I thought of doing built on top of ffaker, like my othre gem: [ffaker-cpfcnpj](https://github.com/halan/ffaker-cpfcnpj) )
 
 ## Contributing
