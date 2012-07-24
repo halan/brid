@@ -5,7 +5,9 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'brid'
+``` ruby
+gem 'brid'
+```
 
 And then execute:
 
