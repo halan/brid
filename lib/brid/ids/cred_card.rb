@@ -29,7 +29,7 @@ module Brid
 
     private
     def valid_number
-      sequential.mod10(1)
+      sequential.mod10
     end
   end
 end

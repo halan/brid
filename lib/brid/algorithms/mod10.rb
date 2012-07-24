@@ -14,7 +14,7 @@ class Mod10 < LuhnBase
 end
 
 class String
-  def mod10 digits, options = {}
+  def mod10 digits = 1, options = {}
     (Mod10.new(self, options) * digits).to_s
   end
 end
