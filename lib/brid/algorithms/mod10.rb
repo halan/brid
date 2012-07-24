@@ -1,4 +1,4 @@
-class Mod10 < Mod
+class Mod10 < LuhnBase
   def initialize number, options = {}
     super number, :base => [2, 1], :mod => 10
   end

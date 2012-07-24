@@ -1,4 +1,4 @@
-class Mod11 < Mod
+class Mod11 < LuhnBase
   def initialize number, options = {}
     options[:mod] = 11
     super number, {:base => 2..11}.merge(options)

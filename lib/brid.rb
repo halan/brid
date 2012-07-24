@@ -6,7 +6,7 @@ require File.join(root_dir, 'version.rb')
 
 #mod algorithms
 [
-  'mod.rb',
+  'luhn.rb',
   'mod10.rb',
   'mod11.rb'
 ].each do |filename|

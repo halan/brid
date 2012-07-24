@@ -1,4 +1,4 @@
-class Mod
+class LuhnBase
   def initialize number, options = {}
     @mod, @base = 0, 0..100
     @number     = number.to_s.scan(/\d/).join
