@@ -5,10 +5,8 @@ class GenericID
   attr_reader :number
   def initialize number
     @number = clear_number(number)
-
-    if number_length > 0 
-      raise ArgumentError.new "invalid number" if @number.length != number_length
-    end
+    
+    @number = @number.rjust number_length, '0' if number_length > 0 and @number.length != number_length
   end
 
   def check_digits

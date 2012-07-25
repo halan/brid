@@ -3,7 +3,7 @@ module Brid
     def initialize number
       @number = clear_number(number)
 
-      raise ArgumentError.new "invalid number" unless (14..19).include? @number.length
+      @number = @number.rjust! 14, '0' unless (14..19).include? @number.length
     end
 
     def sequential 

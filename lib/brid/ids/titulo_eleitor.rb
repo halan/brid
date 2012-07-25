@@ -4,8 +4,6 @@ module Brid
 
     def initialize number
       @number = clear_number(number).rjust number_length, '0'
-
-      raise ArgumentError.new "invalid number" if @number.length != number_length
     end
 
 
