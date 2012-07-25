@@ -24,6 +24,8 @@ class GenericID
   end
 
   def valid?
+    return @valid if self.frozen?
+
     @valid ||= begin
       valid_number == @number and not invalid_sequential?
     rescue TypeError
