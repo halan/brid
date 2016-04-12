@@ -75,7 +75,7 @@ CredCard.new('411119876333502').valid? # true
 
 ## Next Steps
 
-* Develop a smart generator for fixture on tests (I thought of doing built on top of ffaker, like my othre gem: [ffaker-cpfcnpj](https://github.com/halan/ffaker-cpfcnpj) )
+* Develop a smart generator for fixture on tests (I thought of doing built on top of ffaker, like my other gem: [ffaker-cpfcnpj](https://github.com/halan/ffaker-cpfcnpj) )
 
 ## Contributing
 
